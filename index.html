@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton Css</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="img loading"></div>
+        <h1 class="heading loading"></h1>
+        <p class="content loading"></p>
+    </div>
+
+    <script>
+
+        setTimeout(()=>{
+            fetchData();
+        }, 3000)
+        const fetchData = () => {
+            const img = document.querySelector('.img');
+            const heading = document.querySelector('.heading');
+            const content = document.querySelector('.content');
+
+            img.innerHTML = `
+                <img src="https://img.freepik.com/vector-gratis/fondo-halloween-plano-dibujado-mano_23-2149077569.jpg?w=2000" alt="image">
+            `;
+            img.classList.remove('loading');
+
+            heading.textContent = 'title';
+            heading.classList.remove('loading');
+
+            content.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.';
+            content.classList.remove('loading');
+        }
+    </script>
+</body>
+</html>
